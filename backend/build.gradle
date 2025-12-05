@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.5.7'
+	id 'org.springframework.boot' version '3.3.1'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
@@ -47,7 +47,7 @@ dependencies {
     //p6spy
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0' // sql문 오류발견
     //openapi
-    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13' // swagger API 문서 자동화
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0' // swagger API 문서 자동화
 
 }
 
