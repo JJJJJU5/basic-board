@@ -36,6 +36,4 @@ public class Item {
 
     @Column(name = "image_url",nullable = true)
     private String imageUrl;
-
-
 }
