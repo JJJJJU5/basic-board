@@ -11,7 +11,7 @@
 |:---:|:---|:---:|:---|
 | **Ep.1** | **기획과 의도** | [Velog 보기](https://velog.io/@ohjeonguk_/Project-%EC%B7%A8%EB%AF%B8%ED%99%9C%EB%8F%99%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A0%95%EB%B3%B4-%EA%B3%B5%EC%9C%A0-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-Ep.1-%EA%B8%B0%ED%9A%8D%EA%B3%BC%EC%9D%98%EB%8F%84) | 프로젝트 주제 선정 및 핵심 기능 정의 |
 | **Ep.2** | **DB 설계 (ERD)** | [Velog 보기](https://velog.io/@ohjeonguk_/Project-%EC%B7%A8%EB%AF%B8%ED%99%9C%EB%8F%99%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A0%95%EB%B3%B4-%EA%B3%B5%EC%9C%A0-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-Ep.2-DB-%EC%84%A4%EA%B3%84) | 비식별 관계 전략 및 정규화 과정 |
-| **Ep.3** | **Entity 설계** | *(작성 예정)* | JPA Entity 매핑 및 연관관계 설정 |
+| **Ep.3** | **Entity 설계** | [Velog 보기](https://velog.io/@ohjeonguk_/Project-%EC%B7%A8%EB%AF%B8%ED%99%9C%EB%8F%99%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%A0%95%EB%B3%B4-%EA%B3%B5%EC%9C%A0-%EC%BB%A4%EB%AE%A4%EB%8B%88%ED%8B%B0-Ep.3-Entity-%EC%84%A4%EA%B3%84%EC%99%80-Repository-%EA%B5%AC%ED%98%84) | JPA Entity 매핑 및 연관관계 설정 |
 <br>
 
 ## 🛠 Tech Stack
