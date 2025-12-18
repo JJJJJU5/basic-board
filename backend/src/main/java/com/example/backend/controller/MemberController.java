@@ -7,6 +7,7 @@ import com.example.backend.record.SignUpRequest;
 import com.example.backend.service.MemberService;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,9 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
 
     private final MemberService memberService;
+
+    @Value("${cookie.secure:true}") // application.yml에서 값을 읽어오고, 없으면 true를 기본값으로 사용
+    private boolean cookieSecure;
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody SignUpRequest request) {
@@ -31,7 +35,7 @@ public class MemberController {
 
         ResponseCookie cookie = ResponseCookie.from("accessToken", loginResult.token())
                 .httpOnly(true) //JS 접근 불가
-                .secure(true)  //HTTPS만 허용 (Localhost에서는 브라우저가 예외로 처리해줄 수 있음)
+                .secure(cookieSecure)  // 프로필에 따라 동적으로 설정
                 .path("/") // 모든 경로에서 유효
                 .maxAge(60 * 60 * 24) // 24시간 유효
                 .sameSite("Strict")  // CSRF 방지

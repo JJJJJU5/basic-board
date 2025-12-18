@@ -1,0 +1,2 @@
+cookie:
+  secure: true # 운영 환경(https)에서는 secure를 true로 설정

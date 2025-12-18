@@ -4,6 +4,8 @@ package com.example.backend.service;
 import com.example.backend.entity.Member;
 import com.example.backend.entity.Role;
 
+import com.example.backend.exception.DuplicateEmailException;
+import com.example.backend.exception.MemberNotFoundException;
 import com.example.backend.record.LoginRequest;
 import com.example.backend.record.LoginResult;
 import com.example.backend.record.SignUpRequest;
@@ -30,7 +32,7 @@ public class MemberService {
     public void signUp(SignUpRequest request) {
         // 1. 이메일 중복 검사
         if (memberRepository.existsByEmail(request.email())) {
-            throw new IllegalArgumentException("이미 가입된 이메일입니다.");
+            throw new DuplicateEmailException("이미 가입된 이메일입니다.");
         }
         // 2. 비밀번호 암호화 및 회원 엔티티 생성
         Member member = Member.builder()
@@ -52,7 +54,7 @@ public class MemberService {
 
         // 2. 회원 정보 조회 (화면 표시용)
         Member member = memberRepository.findByEmail(request.email())
-                .orElseThrow(() -> new IllegalArgumentException("가입되지 않은 이메일입니다."));
+                .orElseThrow(() -> new MemberNotFoundException("가입되지 않은 이메일입니다."));
 
         // 3. 토큰 생성 및 결과 반환
         String token = jwtService.generateToken(request.email());

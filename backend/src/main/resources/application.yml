@@ -15,3 +15,7 @@ jwt:
   secret: B2woRt5FWhMthMQOZzgRKAEFYqCgpWWCVqKApvAGBk8=
   expiration-time: 86400000 # 24시간
   prefix: "Bearer "
+server:
+  error:
+    include-stacktrace: never  # 스택트레이스를 절대 포함하지 않음
+    include-message: always    # 예외 메시지는 포함
